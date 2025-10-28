@@ -1,6 +1,7 @@
 import { MonsterType } from '../utils/monster.utils';
 
 export class Monster {
+  id: number = -1;
   name: string = 'Monster';
   image: string = './assets/img/pika.png';
   color: string = 'red';
@@ -11,4 +12,8 @@ export class Monster {
   attackStrenght: number = 80;
   attackDescription: string =
     'A powerful attack that causes massive earth-shaking damage to all enemies.';
+
+  copy(): Monster {
+    return Object.assign(new Monster(), this);
+  }
 }

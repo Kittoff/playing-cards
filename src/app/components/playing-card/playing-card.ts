@@ -23,6 +23,6 @@ export class PlayingCard {
     return MonsterTypeProperties[this.monster().type].imageUrl;
   });
   backgroundColor = computed(() => {
-    return MonsterTypeProperties[this.monster().color];
+    return MonsterTypeProperties[this.monster().type].color;
   });
 }
